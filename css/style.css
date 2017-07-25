@@ -1,0 +1,457 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/***********
+
+Web fonts
+
+***********/
+
+@font-face {
+    font-family: 'fregatbold';
+    src: url('../fonts/fregat_bold/fregat_bold-webfont.eot');
+    src: url('../fonts/fregat_bold/fregat_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fregat_bold/fregat_bold-webfont.woff2') format('woff2'),
+         url('../fonts/fregat_bold/fregat_bold-webfont.woff') format('woff'),
+         url('../fonts/fregat_bold/fregat_bold-webfont.ttf') format('truetype'),
+         url('../fonts/fregat_bold/fregat_bold-webfont.svg#fregatbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fregatbold_italic';
+    src: url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.eot');
+    src: url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.woff2') format('woff2'),
+         url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.woff') format('woff'),
+         url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.ttf') format('truetype'),
+         url('../fonts/fregat_bold_italic/fregat_bold_italic-webfont.svg#fregatbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'fregatitalic';
+    src: url('../fonts/fregat_italic/fregat_italic-webfont.eot');
+    src: url('../fonts/fregat_italic/fregat_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fregat_italic/fregat_italic-webfont.woff2') format('woff2'),
+         url('../fonts/fregat_italic/fregat_italic-webfont.woff') format('woff'),
+         url('../fonts/fregat_italic/fregat_italic-webfont.ttf') format('truetype'),
+         url('../fonts/fregat_italic/fregat_italic-webfont.svg#fregatitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'fregatregular';
+    src: url('../fonts/fregat_regular/fregat_regular-webfont.eot');
+    src: url('../fonts/fregat_regular/fregat_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fregat_regular/fregat_regular-webfont.woff2') format('woff2'),
+         url('../fonts/fregat_regular/fregat_regular-webfont.woff') format('woff'),
+         url('../fonts/fregat_regular/fregat_regular-webfont.ttf') format('truetype'),
+         url('../fonts/fregat_regular/fregat_regular-webfont.svg#fregatregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('../fonts/pt_sans/2223-webfont.eot');
+    src: url('../fonts/pt_sans/2223-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pt_sans/2223-webfont.woff2') format('woff2'),
+         url('../fonts/pt_sans/2223-webfont.woff') format('woff'),
+         url('../fonts/pt_sans/2223-webfont.ttf') format('truetype'),
+         url('../fonts/pt_sans/2223-webfont.svg#pt_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('../fonts/pt_sans_reg/2221-webfont.eot');
+    src: url('../fonts/pt_sans_reg/2221-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pt_sans_reg/2221-webfont.woff2') format('woff2'),
+         url('../fonts/pt_sans_reg/2221-webfont.woff') format('woff'),
+         url('../fonts/pt_sans_reg/2221-webfont.ttf') format('truetype'),
+         url('../fonts/pt_sans_reg/2221-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+        font-family: 'fregatregular';
+}
+header{
+    height: 58px;
+    width: 100%;
+    position: relative;
+    background: #fff;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header .col-md-10 ul li{
+    display: inline-block;
+}
+header .col-md-10 ul li a{
+    color: #000;
+    font-size: 13px;
+    font-family: 'fregatregular';
+    text-transform: uppercase;
+}
+header .col-md-10 ul li a:hover{
+    text-decoration: none;
+}
+header .col-md-10 ul li a:after{
+    content: '.';
+    vertical-align: top;
+}
+header .col-md-10 ul li:last-child a:after{
+    content: none;
+}
+/***     Body   ***/
+.banner{
+    width: 100%;
+    height: 603px;
+    background-image: url(../images/baner.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #d7eed6;
+}
+.banner .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+        height: 600px;
+}
+.banner .col-md-6 h2{
+    color: #63b945;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'fregatbold';
+        line-height: 1.2;
+}
+.banner .col-md-6 p{
+    font-size: 18px;
+    font-family: 'fregatregular';
+    color: #4e4e4e;
+    margin-top: 35px;
+    line-height: 1.3;
+}
+.md-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+}
+.md-buttons .md-button{
+      font-family: 'fregatbold';
+    text-transform: uppercase;
+      padding: 15px 45px;
+    -webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+
+}  
+.md-buttons .md-button:first-child{
+     color: #fff;
+    background: #63b945;
+    text-align: center;
+    width: 180px;
+    border: 2px solid  #63b945;
+    margin-right: 60px;
+}  
+.md-buttons .md-button:nth-child(2){
+     color: #fff;
+    border: 2px solid  #63b945;
+    color: #63b945;
+    text-align: center;
+    width: 275px;
+    padding: 15px;
+} 
+.after-banner{
+    background: #63b945;
+    width: 100%;
+    height: 200px;
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+
+.after-banner .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+.after-banner .row .col-md-6:first-child p{
+    color: #fff;
+          font-family: 'fregatbold';
+    text-transform: uppercase;
+    font-size: 20px;
+    
+}
+.after-banner .row .col-md-6 ul li{
+    font-family: 'fregatregular';
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.3;
+}
+
+.after-banner .row .col-md-6 ul li:before{
+    content: '>';
+    margin:  0 10px;
+}
+
+
+/***************    FOOTER    **************/
+
+
+.first-footer{
+    width: 100%;
+    height: 655px;
+    background: #f1f2f2;
+    padding: 65px 0;
+}
+
+
+.first-footer .container{
+    text-align: center;
+}
+
+.first-footer h6{
+    font-size: 28px;
+    color: #4cb027;
+    font-family: 'fregatbold';
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.name-input{
+    font-size: 14px;
+    font-family: 'pt_sansbold';
+    color: #58595b;
+    text-align: left;
+}
+.first-footer .col-md-12 p{
+    color: #a2a2a2;
+    font-size: 16px;
+        font-family: 'fregatregular';
+    margin-bottom: 40px;
+ 
+}
+
+.first-footer .row:nth-child(3){
+    margin-top: 65px;
+}
+.first-footer .row{
+    text-align: center;
+}
+.first-footer form p{
+    font-size: 14px;
+    font-family: 'pt_sansbold';
+    color: #58595b;
+    text-align: left;
+}
+
+.first-footer .col-md-2 p:first-child, .first-footer .col-md-4 p:first-child{
+    color: #656565;
+    font-family: 'fregatregular';
+    font-size: 17px;
+    
+}
+.first-footer .col-md-2 p:nth-child(2), .first-footer .col-md-4 p:nth-child(2){
+        color: #656565;
+    font-family: 'fregatregular';
+    font-size: 14px;
+    margin-top: 10px;
+     line-height: 1.2;
+}
+
+.first-footer form input, .first-footer form select{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e9e9e9;
+    
+}
+.first-footer form input[type="submit"]{
+    width: 100%;
+    background: #4cb027;
+}
+.first-footer form input::-webkit-input-placeholder {color:#939598; text-indent: 15px;}
+.first-footer form input::-moz-placeholder          {color:#939598; text-indent: 15px;}/* Firefox 19+ */
+.first-footer form input:-moz-placeholder           {color:#939598; text-indent: 15px;}/* Firefox 18- */
+.first-footer form input:-ms-input-placeholder      {color:#939598; text-indent:  15px;}
+.first-footer form input:focus::-webkit-input-placeholder { color:transparent; }
+.first-footer form input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.first-footer form input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.first-footer form input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+.first-footer form select option, .first-footer form select {color:#939598; text-indent: 15px;}
+.first-footer form select option, .first-footer form select         {color:#939598; text-indent: 15px;}/* Firefox 19+ */
+.first-footer form select option , .first-footer form select       {color:#939598; text-indent: 15px;}/* Firefox 18- */
+.first-footer form select option, .first-footer form select  {color:#939598; text-indent:  15px;}
+.first-footer form input:focus, .first-footer form select:focus, .first-footer form input:active, .first-footer form select:active{
+    outline: none;
+    
+}
+.second-footer{
+    width: 100%;
+    height: 55px;
+    background: #4c4c4c;
+}
+.second-footer p{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'pt_sansbold';
+    margin-top: 20px;
+    
+}
+
+.form-button{
+        width: 100%;
+    background: #4cb027;
+    color: #fff;
+        height: 50px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+
+/********** Mob menu  ************/
+
+
+.mobile-menu{display:none;
+width:90%;
+padding:11px;
+
+color:#ffffff;
+text-transform:uppercase;
+font-weight:600;
+}
+.mobile-menu:hover{
+
+text-decoration:none;
+}
+
+.menu{
+    display: none;
+}
+
+/******************         media         ******************/
+@media (max-width: 1020px) {
+    .head,  .after-banner, .after-banner .row,    .md-buttons,    .banner .col-md-6{ 
+        display: block;
+    }
+
+  /*  header nav{
+        display: none;
+    }*/
+    .after-banner{
+        min-height: 200px;
+        height: auto;
+        padding: 20px 0;
+    }
+    .after-banner .row .col-md-6:first-child p{
+        margin: 0 0 10px;
+        
+    }
+    .md-buttons div{
+        margin: 10px 0;
+    }
+    .banner .container{
+        background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+    }
+    .banner .col-md-6 h2{
+        padding-top: 20px;
+    }
+    .first-footer{
+        min-height: 655px;
+        height: auto;
+    }
+    .mobile-menu{
+        display: block;
+    }
+    
+}
+
